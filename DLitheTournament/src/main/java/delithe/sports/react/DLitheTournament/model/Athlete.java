@@ -15,8 +15,10 @@ public class Athlete
 	private String name;
 	private long contactNo;
 	private double weight;
+	
 	@ManyToOne
 	private Tournament tournament;
+	
 	public int getEnrollId() {
 		return enrollId;
 	}
