@@ -4,7 +4,9 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,11 +15,25 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 import org.springframework.lang.Nullable;
+/* 
+ * entity relationships
+ * 1 to 1
+ * 1 to many
+ * many to 1
+ * many to many
+ * 
+ * 
+ * scopes of entity object:
+ * transient>> not yet attached to the orm
+ * persist>> attached to orm
+ * detach>> disconnected from orm
+ */
+
 
 @Entity
 public class Tournament 
 {
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int tournamentId;
 	private Date startDate;
 	private int price;
@@ -27,7 +43,7 @@ public class Tournament
 	private String venue;
 	private String name;
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	//created for our purpose
 	@JoinTable(name="record",joinColumns = @JoinColumn(name="ëventTd"),
 					inverseJoinColumns=@JoinColumn(name="participantId"))

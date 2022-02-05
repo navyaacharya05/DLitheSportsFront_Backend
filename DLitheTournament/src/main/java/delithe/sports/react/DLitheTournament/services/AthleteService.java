@@ -12,8 +12,8 @@ public class AthleteService
 	@Autowired
 	AthleteRepository arepo;
 	
-	public  String enroll(Athlete athlete)
+	public String enroll(Athlete athlete)
 	{
-		return arepo.save(athlete).getName()+"has enrolled the"+athlete.getTournament().getName();
+		return arepo.save(athlete).getName()+" has enrolled the "+athlete.getTournament().getName();
 	}
 }
