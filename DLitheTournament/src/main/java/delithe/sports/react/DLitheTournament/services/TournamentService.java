@@ -29,8 +29,15 @@ public class TournamentService
 //		return trepo.findFew();
 //	}
 	
+	//To declare participants
 	public Tournament fetchingOnlyOne(Integer id)
 	{
 		return trepo.findById(id).orElse(new Tournament());
 	}
+	
+	public String announce(Tournament tournament)
+	{
+		return trepo.save(tournament).getName()+"has updated";
+	}
+	
 }
