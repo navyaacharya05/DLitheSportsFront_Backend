@@ -58,6 +58,12 @@ public class DLitheSportsContoller
 		return t+"winner is"+winner;
 	}
 	
+	//get tournament with id by user
+	@GetMapping("/one/{id}")
+	public Tournament gettingOne(@PathVariable("id") Integer id)
+	{
+		return tservice.fetchingOnlyOne(id);
+	}
 //	@GetMapping("/choose")
 //	public List<Object[]> few()
 //	{

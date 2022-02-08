@@ -22,4 +22,7 @@ export const updating=async(word,obj)=>{
     return t;
 }
 
-//export {inserting}
+export const onlyOne=async(num)=>{
+    const t = await axios.get(`${url}/one/${num}`)
+    return t;
+}
