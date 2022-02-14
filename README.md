@@ -12,15 +12,15 @@ Spring boot is an opensource Java-based framework used to create a micro Service
 
 # Implementation
 
-1)1)Created new Database for this project in Xampp->phpMyadmin
+1) Created new Database for this project in Xampp->phpMyadmin
 
-2)Created new folder in the Desktop
+2) Created new folder in the Desktop
 
-3)Created SpringBoot project by adding Jpa repository,which helps to add additional dependencies to a project,and genearated as jar file.
+3) Created SpringBoot project by adding Jpa repository,which helps to add additional dependencies to a project,and genearated as jar file.
 
-4)Imported springboot project ,created-Entity,Repository,Service and Controller files in Eclipse.Added dependencies of mysql connector in pom.xml and also added the database name in application.properties file.
+4) Imported springboot project ,created-Entity,Repository,Service and Controller files in Eclipse.Added dependencies of mysql connector in pom.xml and also added the database name in application.properties file.
 
-5)In the frontend created a new project using command:
+5) In the frontend created a new project using command:
 
     Goto Terminal->New Teminal
 
@@ -32,7 +32,7 @@ Spring boot is an opensource Java-based framework used to create a micro Service
       
     >npm start
   
-6)Add all required dependencies:
+6) Add all required dependencies:
 
     >npm i bootstrap
 
